@@ -2,6 +2,10 @@
   color: #183A1D;
 }
 
+.navbar {
+  align-items: center;
+}
+
 footer {
   text-align: center;
 }
