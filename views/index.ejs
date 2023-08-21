@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h2><%= new Date().toLocaleDateString('en-uk', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) %></h2>
+    </div>
+    <form action="/" method="POST" id="todo-form">
+      <input type="text" class="form-control" name="task" placeholder="e.g. Coding" autofocus>
+      <!-- <input type="submit" value="Add Item"> -->
+      <button type="submit" id="submit-button">ADD TASK</button>
+    </form>
+  </div>
+
+  <!-- displaying the list of tasks on the home page. -->
+  <div class="container">
+    <ul class="todos">
+      <% if (locals.allTasks) { %>
+        <% locals.allTasks.forEach(task => { %>
+          <li>
+            <div>
+              <input type="checkbox" name="tasks" class="checkbox">
+              <span><%= task %></span>
+            </div>
+          </li>
+          <% })}; %>
+        </ul>
+      </div>
+
+      <%- include("partials/footer.ejs") %>
+</body>

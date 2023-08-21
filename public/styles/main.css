@@ -1,0 +1,78 @@
+main, body {
+  background-color: #E1EEDD;
+  font-family:'Ubuntu Mono', monospace;
+  font-size: 1rem;
+  color: #183A1D;
+}
+
+.heading {
+  background-color: #183A1D;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+h2 {
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 0 1rem;
+}
+
+#submit-button {
+  width: 100%;
+  border-radius: 4px;
+  background-color: #F0A04B;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-weight: bold;
+}
+
+#submit-button:hover {
+  background-color: #dd8f3b;
+  cursor: pointer;
+}
+
+form > input {
+  margin-bottom: 1rem;
+}
+
+.todos {
+  margin-bottom: 3rem;
+  padding-left: 0;
+}
+
+.todos li {
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1.5rem 1rem;
+  list-style-type: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.todos li div {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.checkbox:checked + span {
+  text-decoration: line-through;
+  color: #7e8f84;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .container {
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h2>Bucket List</h2>
+    </div>
+    <form action="/bucket-list" method="POST" id="todo-form">
+      <input type="text" class="form-control" name="item" placeholder="e.g. Visit North Pole" autofocus>
+      <!-- <input type="submit" value="Add Item"> -->
+      <button type="submit" id="submit-button">ADD ITEM</button>
+    </form>
+  </div>
+
+  <!-- displaying the list of tasks on the home page. -->
+  <div class="container">
+    <ul class="todos">
+      <% if (locals.allBucketItems) { %>
+        <% locals.allBucketItems.forEach(item => { %>
+          <li>
+            <div>
+              <input type="checkbox" name="items" class="checkbox">
+              <span><%= item %></span>
+            </div>
+          </li>
+          <% })}; %>
+        </ul>
+      </div>
+
+      <%- include("partials/footer.ejs") %>
+</body>
